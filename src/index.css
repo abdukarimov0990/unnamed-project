@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+.container{
+    @apply max-w-[1380px] mx-auto w-full px-5
+}
+
+@theme{
+    --font-roboto:"Roboto", "sans-serif";
+  }
+  
+  /* Example: custom styles for Swiper pagination */
+/* Pagination (endi chapda) */
+.custom-pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  background-color: #d1d5db;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #000;
+  width: 12px;
+}
+
+/* Navigation tugmalari (endi o‘ngda) */
+.nav-btn {
+  @apply p-2 rounded-full border-2 border-black bg-white
+}
+
+.nav-btn:hover {
+  background-color: #e5e7eb;
+}
+/* Swiper navigation (next/prev arrow buttons) */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply p-2 rounded-full border-2 border-black
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #e5e7eb;
+}
+
+/* Swiper pagination bullets */
+.-pagination-bullet {
+  background-color: #d1d5db !important; /* Kulrang */
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important; /* Faol nuqta qora */
+  width: 12px;
+}
