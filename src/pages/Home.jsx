@@ -44,10 +44,11 @@ const Home = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper h-screen"
                 >
-                    <SwiperSlide className=" bg-cover bg-center h-screen w-full bg-no-repeat" style={{ backgroundImage: `url(${bg1})` }}>
-                        <div className="container text-white flex items-center">
-                            <div className=" w-full translate-y-1 text-center lg:text-start mt-14 lg:mt-0 lg:translate-y-1/2 max-w-[668px] mb-20">
-                            <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
+                    <SwiperSlide className="relative bg-cover bg-center h-screen w-full bg-no-repeat" style={{ backgroundImage: `url(${bg1})` }}>
+                        <div className="absolute inset-0 bg-black opacity-40 z-0"></div> {/* Qorong'u qatlam */}
+                        <div className="container relative z-10 h-full flex items-center justify-start">
+                            <div className="text-white text-center lg:text-start max-w-[668px]">
+                                <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
                                 <div className="flex justify-center lg:justify-start gap-4">
                                     <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">Узнать больше</div>
                                     <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">Регистрация</div>
@@ -55,19 +56,25 @@ const Home = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className="relative bg-cover item bg-center w-full bg-no-repeat backdrop-opacity-10" style={{ backgroundImage: `url(${bg2})` }}>
-    <div className="absolute inset-0 bg-black opacity-40 z-0"></div> {/* Qorong'u qatlam */}
-    
-    <div className="container text-white flex items-center relative z-10">
-        <div className="w-full translate-y-1 text-center lg:text-start mt-14 lg:mt-0 lg:translate-y-1/2 max-w-[668px] mb-20">
-            <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
-            <div className="flex justify-center lg:justst gap-4">
-                <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">Узнать больше</div>
-                <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">Регистрация</div>
-            </div>
-        </div>
-    </div>
-</SwiperSlide>
+                    <SwiperSlide
+                        className="relative bg-cover bg-center w-full h-screen bg-no-repeat"
+                        style={{ backgroundImage: `url(${bg2})` }}
+                    >
+                        <div className="absolute inset-0 bg-black opacity-40 z-0"></div> {/* Qorong'u qatlam */}
+                        <div className="container h-full flex items-center justify-start text-white relative z-10">
+                            <div className="text-center lg:text-start max-w-[668px]">
+                                <h1 className="font-bold text-6xl mb-6">Ваш надежный источник медицинской информации</h1>
+                                <div className="flex justify-center lg:justify-start gap-4">
+                                    <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">
+                                        Узнать больше
+                                    </div>
+                                    <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">
+                                        Регистрация
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </section>
             <section className='py-16'>
