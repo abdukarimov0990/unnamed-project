@@ -6,7 +6,6 @@ import logo from '../img/logo.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,8 +47,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-
-        {/* Mobile hamburger (faqat < lg) */}
         <div className="lg:hidden z-50">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <HiX size={28} /> : <HiOutlineMenuAlt3 size={28} />}
@@ -57,7 +54,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

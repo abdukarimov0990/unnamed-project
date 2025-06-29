@@ -5,8 +5,6 @@ import { BsInstagram, BsTwitterX, BsYoutube } from 'react-icons/bs'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
-
 const Footer = () => {
   useEffect(() => {
     AOS.init({
@@ -52,12 +50,8 @@ const Footer = () => {
             <li><a href="#">Ссылка Десять</a></li>
           </ul>
         </div>
-
-        {/* Empty or Optional Right Column */}
         <div></div>
       </div>
-
-      {/* Bottom Bar */}
       <div className="container border-t mt-8 pt-8 px-4 flex flex-col md:flex-row justify-between items-center text-sm">
         <p>© 2025 Relume. Все права защищены.</p>
         <div className="flex gap-4 mt-2 md:mt-0">

@@ -5,13 +5,9 @@ import { IconContext } from 'react-icons'
 import { BiLeftArrowAlt, BiLocationPlus, BiMessage, BiPhone, BiRightArrow, BiRightArrowAlt, BiSolidRightArrow } from 'react-icons/bi'
 import { CgCreditCard } from 'react-icons/cg'
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// import required modules
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -31,7 +27,6 @@ const Home = () => {
             once: false,
         });
     }, []);
-    
     return (
         <div>
             <section data-aos="fade-up"  className='pb-16'>
@@ -59,7 +54,6 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
                     </SwiperSlide>
                     <SwiperSlide className=" bg-cover  item bg-center w-full bg-no-repeat" style={{ backgroundImage: `url(${bg2})` }}>
                         <div className="container text-white flex items-center">
@@ -73,9 +67,7 @@ const Home = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-
                 </Swiper>
-
             </section>
             <section className='py-16'>
                 <div className="container">
@@ -102,7 +94,6 @@ const Home = () => {
                             <p className='mb-8'>Присоединяйтесь к обсуждениям и делитесь своим опытом.</p>
                             <a href="#" className='flex items-center gap-4'><p>Присоединиться</p><BiRightArrowAlt></BiRightArrowAlt></a>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -168,7 +159,6 @@ const Home = () => {
                                 ))
                             }
                         </Swiper>
-
                         <div className="w-full px-4 mt-12 flex justify-between items-center z-10">
                             <div className="custom-pagination flex gap-2" />
 
@@ -181,7 +171,6 @@ const Home = () => {
                     <button className='py-3 px-6 block lg:hidden bg-white border-2 border-black'>
                         View More
                     </button>
-
                 </div>
             </section>
             <section className='py-16'>
@@ -291,7 +280,6 @@ const Home = () => {
                             className='w-full  h-[400px] lg:h-auto rounded-md'
                         ></iframe>
                     </div>
-
                 </div>
             </section>
         </div>
@@ -313,7 +301,6 @@ const VideoPlayer = ({ videoSrc }) => {
             setIsPlaying(false);
         }
     };
-
     return (
         <div className="relative">
             <video
