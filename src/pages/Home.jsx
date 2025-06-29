@@ -14,11 +14,12 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { blogData, videos } from '../data/data'
 import { TfiEmail } from 'react-icons/tfi'
 import { MdAppBlocking, MdLocalGasStation } from 'react-icons/md'
-import { BsMarkdown } from 'react-icons/bs'
+import { BsHospital, BsMarkdown } from 'react-icons/bs'
 import bg1 from '../img/hero-img1.jpg'
 import bg2 from '../img/hero-img2.jpg'
 import { useState, useRef } from "react";
 import { FaBullhorn, FaNewspaper, FaPlay, FaRegNewspaper } from "react-icons/fa";
+import { GiDoctorFace, GiMedicinePills } from 'react-icons/gi'
 
 const Home = () => {
     useEffect(() => {
@@ -54,17 +55,19 @@ const Home = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className=" bg-cover  item bg-center w-full bg-no-repeat" style={{ backgroundImage: `url(${bg2})` }}>
-                        <div className="container text-white flex items-center">
-                            <div className=" w-full translate-y-1 text-center lg:text-start mt-14 lg:mt-0 lg:translate-y-1/2 max-w-[668px] mb-20">
-                                <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
-                                <div className="flex justify-center lg:justst gap-4">
-                                    <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">Узнать больше</div>
-                                    <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">Регистрация</div>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                    <SwiperSlide className="relative bg-cover item bg-center w-full bg-no-repeat backdrop-opacity-10" style={{ backgroundImage: `url(${bg2})` }}>
+    <div className="absolute inset-0 bg-black opacity-40 z-0"></div> {/* Qorong'u qatlam */}
+    
+    <div className="container text-white flex items-center relative z-10">
+        <div className="w-full translate-y-1 text-center lg:text-start mt-14 lg:mt-0 lg:translate-y-1/2 max-w-[668px] mb-20">
+            <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
+            <div className="flex justify-center lg:justst gap-4">
+                <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">Узнать больше</div>
+                <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">Регистрация</div>
+            </div>
+        </div>
+    </div>
+</SwiperSlide>
                 </Swiper>
             </section>
             <section className='py-16'>
@@ -75,19 +78,19 @@ const Home = () => {
                     </div>
                     <div className="grid grid-1 gap-12 lg:grid-cols-3">
                         <div data-aos="zoom-in" className="text-black">
-                            <FaNewspaper size={48} className='mb-7'></FaNewspaper>
+                            <BsHospital size={48} className='mb-7'></BsHospital>
                             <h3 className='font-bold text-2xl leading-9 mb-6'>Актуальные новости о здоровье и медицине на нашем сайте</h3>
                             <p className='mb-8'>Следите за последними событиями в мире <br /> медицины.</p>
                             <a href="#" className='flex items-center gap-4'><p>Узнать</p><BiRightArrowAlt></BiRightArrowAlt></a>
                         </div>
                         <div data-aos="zoom-in" className="text-black">
-                            <FaRegNewspaper size={48} className='mb-7'></FaRegNewspaper>
+                            <GiMedicinePills size={48} className='mb-7'></GiMedicinePills>
                             <h3 className='font-bold text-2xl leading-9 mb-6'>Обучающие видео для вашего здоровья и благополучия</h3>
                             <p className='mb-8'>Смотрите наши видеоуроки и улучшайте свои знания о здоровье.</p>
                             <a href="#" className='flex items-center gap-4'><p>Смотреть</p><BiRightArrowAlt></BiRightArrowAlt></a>
                         </div>
                         <div data-aos="zoom-in" className="text-black">
-                            <FaBullhorn size={48} className='mb-7'></FaBullhorn>
+                            <GiDoctorFace size={48} className='mb-7'></GiDoctorFace>
                             <h3 className='font-bold text-2xl leading-9 mb-6'>Форум для общения и обмена опытом среди пользователей</h3>
                             <p className='mb-8'>Присоединяйтесь к обсуждениям и делитесь своим опытом.</p>
                             <a href="#" className='flex items-center gap-4'><p>Присоединиться</p><BiRightArrowAlt></BiRightArrowAlt></a>
