@@ -22,7 +22,7 @@ import { BsMarkdown } from 'react-icons/bs'
 import bg1 from '../img/hero-img1.jpg'
 import bg2 from '../img/hero-img2.jpg'
 import { useState, useRef } from "react";
-import { FaPlay } from "react-icons/fa";
+import { FaBullhorn, FaNewspaper, FaPlay, FaRegNewspaper } from "react-icons/fa";
 
 const Home = () => {
     useEffect(() => {
@@ -85,19 +85,19 @@ const Home = () => {
                     </div>
                     <div className="grid grid-1 gap-12 lg:grid-cols-3">
                         <div data-aos="zoom-in" className="text-black">
-                            <CiWarning size={48} className='mb-7'></CiWarning>
+                            <FaNewspaper size={48} className='mb-7'></FaNewspaper>
                             <h3 className='font-bold text-2xl leading-9 mb-6'>Актуальные новости о здоровье и медицине на нашем сайте</h3>
-                            <p className='mb-8'>Следите за последними событиями в мире медицины.</p>
+                            <p className='mb-8'>Следите за последними событиями в мире <br /> медицины.</p>
                             <a href="#" className='flex items-center gap-4'><p>Узнать</p><BiRightArrowAlt></BiRightArrowAlt></a>
                         </div>
                         <div data-aos="zoom-in" className="text-black">
-                            <CgCreditCard size={48} className='mb-7'></CgCreditCard>
+                            <FaRegNewspaper size={48} className='mb-7'></FaRegNewspaper>
                             <h3 className='font-bold text-2xl leading-9 mb-6'>Обучающие видео для вашего здоровья и благополучия</h3>
                             <p className='mb-8'>Смотрите наши видеоуроки и улучшайте свои знания о здоровье.</p>
                             <a href="#" className='flex items-center gap-4'><p>Смотреть</p><BiRightArrowAlt></BiRightArrowAlt></a>
                         </div>
                         <div data-aos="zoom-in" className="text-black">
-                            <BiMessage size={48} className='mb-7'></BiMessage>
+                            <FaBullhorn size={48} className='mb-7'></FaBullhorn>
                             <h3 className='font-bold text-2xl leading-9 mb-6'>Форум для общения и обмена опытом среди пользователей</h3>
                             <p className='mb-8'>Присоединяйтесь к обсуждениям и делитесь своим опытом.</p>
                             <a href="#" className='flex items-center gap-4'><p>Присоединиться</p><BiRightArrowAlt></BiRightArrowAlt></a>
