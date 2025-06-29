@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from '../img/logo.svg'
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa'
 import { BsInstagram, BsTwitterX, BsYoutube } from 'react-icons/bs'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+}, []);
   return (
-    <footer className='py-20'>
+    <footer data-aos="fade-up" className='pt-20 pb-8'>
         <div className="container grid grid-cols-1 md:grid-cols-3">
         <div>
           <img src={logo} alt="Logo" className="mb-4" />
@@ -17,7 +26,7 @@ const Footer = () => {
           <a href="mailto:email@example.com" className="text-blue-600 underline">
             email@example.com
           </a>
-          <div className="flex gap-4 mt-10 text-xl">
+          <div className="flex gap-4 mt-10 mb-10 lg:mt-0  text-xl">
             <a href="#"><FaFacebook></FaFacebook></a>
             <a href="#"><BsInstagram></BsInstagram></a>
             <a href="#"><BsTwitterX></BsTwitterX></a>

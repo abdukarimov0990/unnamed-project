@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../img/logo.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +16,14 @@ const Header = () => {
     { label: 'Видеоуроки', href: '#' },
     { label: 'Форум', href: '#' },
   ];
-
+  useEffect(() => {
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+}, []);
   return (
-    <header className="py-4 border-b border-gray-300 relative z-50">
+    <header data-aos="fade-up" className="py-4 border-b border-gray-300 relative z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo */}
         <Link to="/">
