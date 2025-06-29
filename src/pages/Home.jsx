@@ -46,8 +46,7 @@ const Home = () => {
                     <SwiperSlide className=" bg-cover bg-center h-screen w-full bg-no-repeat" style={{ backgroundImage: `url(${bg1})` }}>
                         <div className="container text-white flex items-center">
                             <div className=" w-full translate-y-1 text-center lg:text-start mt-14 lg:mt-0 lg:translate-y-1/2 max-w-[668px] mb-20">
-                                <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
-                                <p className='mb-8'>Мы предоставляем актуальные новости, видеоуроки и платформу для обсуждения медицинских тем. Присоединяйтесь к нашему сообществу, чтобы быть в курсе <br /> последних событий в мире медицины.</p>
+                            <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
                                 <div className="flex justify-center lg:justify-start gap-4">
                                     <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">Узнать больше</div>
                                     <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">Регистрация</div>
@@ -59,7 +58,6 @@ const Home = () => {
                         <div className="container text-white flex items-center">
                             <div className=" w-full translate-y-1 text-center lg:text-start mt-14 lg:mt-0 lg:translate-y-1/2 max-w-[668px] mb-20">
                                 <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
-                                <p className='mb-8'>Мы предоставляем актуальные новости, видеоуроки и платформу для обсуждения медицинских тем. Присоединяйтесь к нашему сообществу, чтобы быть в курсе <br /> последних событий в мире медицины.</p>
                                 <div className="flex justify-center lg:justst gap-4">
                                     <div className="px-5 py-2 text-white bg-black border-2 border-black cursor-pointer hover:opacity-70">Узнать больше</div>
                                     <div className="px-5 py-2 text-black bg-white border-2 border-black cursor-pointer hover:opacity-70">Регистрация</div>
