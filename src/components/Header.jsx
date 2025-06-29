@@ -26,7 +26,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo */}
         <Link to="/">
-          <img src={logo} alt="logo" className="w-32" />
+          <h2 className='text-3xl font-roboto font-bold'>MeddiaLog</h2>
         </Link>
 
         {/* Desktop nav (lg va undan katta) */}

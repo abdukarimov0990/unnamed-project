@@ -29,7 +29,7 @@ const Home = () => {
     }, []);
     return (
         <div>
-            <section data-aos="fade-up"  className='pb-16'>
+            <section data-aos="fade-up" className='pb-16'>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
@@ -180,35 +180,35 @@ const Home = () => {
                         <p>Узнайте больше о наших обучающих видеоуроках.</p>
                     </div>
                     <div data-aos="fade-up" className="relative">
-                            <Swiper
-                                slidesPerView={4}
-                                spaceBetween={32}
-                                pagination={{
-                                    clickable: true,
-                                }}
-                                navigation={{
-                                    nextEl: ".custom-next",
-                                    prevEl: ".custom-prev",
-                                }}
-                                modules={[Autoplay, Pagination, Navigation]}
-                                className="mySwiper"
-                                breakpoints={{
-                                    0: {
-                                        slidesPerView: 1.2,
-                                    },
-                                    1024: {
-                                        slidesPerView: 3,
-                                    },
-                                }}
-                            >
-                                {videos.map((item, index) => (
-                                    <SwiperSlide key={index}>
-                                        <div className="relative mb-10">
-                                            <VideoPlayer videoSrc={item.video} />
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
+                        <Swiper
+                            slidesPerView={4}
+                            spaceBetween={32}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            navigation={{
+                                nextEl: ".custom-next",
+                                prevEl: ".custom-prev",
+                            }}
+                            modules={[Autoplay, Pagination, Navigation]}
+                            className="mySwiper"
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1.2,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                        >
+                            {videos.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="relative mb-10">
+                                        <VideoPlayer videoSrc={item.video} />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                         <div className="hidden lg:block">
                             <button className="custom-prev  nav-btn absolute top-1/2 -translate-y-1/2 left-[-30px] z-10">
                                 <BiLeftArrowAlt size="30px"></BiLeftArrowAlt>
@@ -272,7 +272,7 @@ const Home = () => {
 
                         {/* Right side - Map */}
                         <iframe
-                        data-aos="fade-left"
+                            data-aos="fade-left"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12067.905655892979!2d69.2549202!3d41.292592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1719580620000!5m2!1sen!2s"
                             allowFullScreen=""
                             loading="lazy"
@@ -307,7 +307,7 @@ const VideoPlayer = ({ videoSrc }) => {
                 ref={videoRef}
                 src={videoSrc}
                 className="h-[296px] w-full object-cover"
-                onEnded={() => setIsPlaying(false)} 
+                onEnded={() => setIsPlaying(false)}
             />
             {!isPlaying && (
                 <button
