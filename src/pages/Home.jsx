@@ -20,6 +20,9 @@ import bg2 from '../img/hero-img2.jpg'
 import { useState, useRef } from "react";
 import { FaBullhorn, FaNewspaper, FaPlay, FaRegNewspaper } from "react-icons/fa";
 import { GiDoctorFace, GiMedicinePills } from 'react-icons/gi'
+import { HiNewspaper } from "react-icons/hi";
+import { FaVideo, FaComments } from "react-icons/fa";
+
 
 const Home = () => {
     useEffect(() => {
@@ -80,27 +83,53 @@ const Home = () => {
             <section className='py-16'>
                 <div className="container">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-                        <h2 data-aos="fade-right" className='font-bold text-5xl'>Ключевые функции нашего сайта для вашего здоровья и обучения</h2>
+                        <div className="">
+                        <h2 data-aos="fade-right" className='font-bold text-5xl mb-4'>Hовости</h2>
+                        <p data-aos="fade-right">Ключевые функции нашего сайта для вашего здоровья и обучения</p>
+                        </div>
                         <p data-aos="fade-left" className='text-xl'>Мы предоставляем актуальные медицинские новости, чтобы вы всегда были в курсе событий. Наши видеоуроки помогут вам освоить новые навыки и улучшить здоровье. Присоединяйтесь к нашему форуму для обсуждения и обмена опытом с другими пользователями.</p>
                     </div>
                     <div className="grid grid-1 gap-12 lg:grid-cols-3">
                         <div data-aos="zoom-in" className="text-black">
-                            <BsHospital size={48} className='mb-7'></BsHospital>
-                            <h3 className='font-bold text-2xl leading-9 mb-6'>Актуальные новости о здоровье и медицине на нашем сайте</h3>
-                            <p className='mb-8'>Следите за последними событиями в мире <br /> медицины.</p>
-                            <a href="#" className='flex items-center gap-4'><p>Узнать</p><BiRightArrowAlt></BiRightArrowAlt></a>
+                            <HiNewspaper size={48} className="mb-7" />
+                            <h3 className="font-bold text-2xl leading-9 mb-6">
+                                Актуальные новости о здоровье и медицине на нашем сайте
+                            </h3>
+                            <p className="mb-8">
+                                Следите за последними событиями в мире <br /> медицины.
+                            </p>
+                            <a href="#" className="flex items-center gap-4">
+                                <p>Узнать</p>
+                                <BiRightArrowAlt />
+                            </a>
                         </div>
+
                         <div data-aos="zoom-in" className="text-black">
-                            <GiMedicinePills size={48} className='mb-7'></GiMedicinePills>
-                            <h3 className='font-bold text-2xl leading-9 mb-6'>Обучающие видео для вашего здоровья и благополучия</h3>
-                            <p className='mb-8'>Смотрите наши видеоуроки и улучшайте свои знания о здоровье.</p>
-                            <a href="#" className='flex items-center gap-4'><p>Смотреть</p><BiRightArrowAlt></BiRightArrowAlt></a>
+                            <FaVideo size={48} className="mb-7" />
+                            <h3 className="font-bold text-2xl leading-9 mb-6">
+                                Обучающие видео для вашего здоровья и благополучия
+                            </h3>
+                            <p className="mb-8">
+                                Смотрите наши видеоуроки и улучшайте свои знания о здоровье.
+                            </p>
+                            <a href="#" className="flex items-center gap-4">
+                                <p>Смотреть</p>
+                                <BiRightArrowAlt />
+                            </a>
                         </div>
+
                         <div data-aos="zoom-in" className="text-black">
-                            <GiDoctorFace size={48} className='mb-7'></GiDoctorFace>
-                            <h3 className='font-bold text-2xl leading-9 mb-6'>Форум для общения и обмена опытом среди пользователей</h3>
-                            <p className='mb-8'>Присоединяйтесь к обсуждениям и делитесь своим опытом.</p>
-                            <a href="#" className='flex items-center gap-4'><p>Присоединиться</p><BiRightArrowAlt></BiRightArrowAlt></a>
+                            <FaComments size={48} className="mb-7" />
+                            <h3 className="font-bold text-2xl leading-9 mb-6">
+                                Форум для общения и обмена опытом среди пользователей
+                            </h3>
+                            <p className="mb-8">
+                                Присоединяйтесь к обсуждениям и делитесь своим опытом.
+                            </p>
+                            <a href="#" className="flex items-center gap-4">
+                                <p>Присоединиться</p>
+                                <BiRightArrowAlt />
+                            </a>
                         </div>
                     </div>
                 </div>
