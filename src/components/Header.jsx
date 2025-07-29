@@ -10,15 +10,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Главная страница', href: '#' },
-    { label: 'Новости медицины', href: '#' },
+    { label: 'Главная страница', href: '/' },
+    { label: 'Новости медицины', href: '/news' },
     { label: 'Видеоуроки', href: '#' },
     { label: 'Форум', href: '#' },
   ];
   useEffect(() => {
     AOS.init({
         duration: 1000,
-        once: false,
+        once: true,
     });
 }, []);
   return (
