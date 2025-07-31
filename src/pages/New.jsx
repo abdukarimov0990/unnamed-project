@@ -8,19 +8,26 @@ import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import webflow from '../img/webflow.svg';
 import p6 from '../img/p6.jfif';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 const New = () => {
     const [showMobileTOC, setShowMobileTOC] = useState(false);
     const { id } = useParams();
     const newsItem = blogData.find(news => String(news.id) === String(id));
-
     const [activeId, setActiveId] = useState(null);
     const [currentUrl, setCurrentUrl] = useState('');
     const [openIndex, setOpenIndex] = useState(null);
     const [clickedId, setClickedId] = useState(null); // faqat mobil uchun
 
-
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }, []);
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setCurrentUrl(window.location.href);
@@ -68,8 +75,8 @@ const New = () => {
     }
 
     return (
-        <>
-            <section className='py-10'>
+<>
+            <section className='py-10' data-aos="fade-up">
                 <div className="container px-4 md:px-8">
 
                     <div className="flex justify-center mb-20">
@@ -108,7 +115,7 @@ const New = () => {
                 </div>
             </section>
 
-            <section className='py-10'>
+            <section className='py-10' data-aos="fade-up">
                 <div className="container px-4 md:px-8 flex flex-col justify-between lg:flex-row gap-10">
                     <div className="block lg:hidden">
                         <button
@@ -154,7 +161,7 @@ const New = () => {
                                                     section.level === 4 ? 'text-2xl' :
                                                         section.level === 5 ? 'text-xl' :
                                                             section.level === 6 ? 'text-lg' :
-                                                                'text-2xl' // default fallback
+                                                                'text-2xl'
                                                 }`}
                                         >
                                             {section.title}
@@ -179,7 +186,6 @@ const New = () => {
                         ))}
                     </div>
 
-                    {/* Desktop TOC (lg dan katta) */}
                     <aside className="hidden lg:block p-6 w-full lg:max-w-xs top-20 h-fit sticky">
                         <h2 className="text-2xl md:text-3xl font-bold mb-6">Оглавление</h2>
                         <nav className="flex flex-col gap-2">
@@ -201,7 +207,7 @@ const New = () => {
                 </div>
             </section>
 
-            <section className="px-4 py-10">
+            <section className="px-4 py-10" data-aos="fade-up">
                 <div className="container">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">Часто задаваемые вопросы</h2>
                     <p className="mb-20">Здесь вы найдёте ответы на наиболее распространённые вопросы по актуальным медицинским новостям.</p>
@@ -228,7 +234,7 @@ const New = () => {
                 </div>
             </section>
 
-            <section className='py-10'>
+            <section className='py-10' data-aos="fade-up">
                 <div className="container flex flex-col space-y-8 items-center justify-center px-4 text-center">
                     <img src={webflow} alt="webflow log" className='mx-auto' />
                     <h3 className='font-extrabold text-lg md:text-xl'>"Этот пост был очень информативным и помог мне лучше понять <br className='hidden sm:block' /> последние события в медицине."</h3>
@@ -240,7 +246,7 @@ const New = () => {
                 </div>
             </section>
 
-            <section className='py-10'>
+            <section className='py-10' data-aos="fade-up">
                 <div className="container flex flex-col lg:flex-row justify-between items-center gap-6 px-4">
                     <div className="flex flex-col gap-4 text-center lg:text-left">
                         <h3 className='text-2xl md:text-4xl font-bold'>Поделитесь своим мнением с нами</h3>
