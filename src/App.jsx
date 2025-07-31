@@ -3,12 +3,14 @@ import { createBrowserRouter, createRoutesFromChildren, Route, RouterProvider } 
 import MainLayout from './layouts/MainLayout'
 import Home from './pages/Home'
 import News from './pages/News'
+import New from './pages/New'
 
 const router = createBrowserRouter(
   createRoutesFromChildren(
     <Route element={<MainLayout />}>
       <Route path='/' element={<Home />} />
       <Route path='/news' element={<News />} />
+      <Route path='/news/:id' element={<New/>} />
     </Route>
   )
 )

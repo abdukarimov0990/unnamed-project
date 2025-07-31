@@ -49,7 +49,7 @@ const News = () => {
                                     <p>{item.description}</p>
                                 </div>
                                 <div className="grow flex items-end">
-                                    <Link to="#" className='cursor-pointer'>
+                                    <Link to={`/news/${item.id}`} className='cursor-pointer'>
                                         <button className='gap-2 flex items-center'>Читать далее <MdKeyboardArrowRight size={24} /></button>
                                     </Link>
                                 </div>
@@ -105,7 +105,7 @@ const News = () => {
                                                 <p>{item.description}</p>
                                             </div>
                                             <div className="grow flex items-end">
-                                                <Link to="#" className='cursor-pointer'>
+                                                <Link to={`/news/${item.id}`} className='cursor-pointer'>
                                                     <button className='gap-2 flex items-center'>
                                                         Читать далее <MdKeyboardArrowRight size={24} />
                                                     </button>
