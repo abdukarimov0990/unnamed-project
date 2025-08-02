@@ -12,7 +12,7 @@ const Header = () => {
   const navLinks = [
     { label: 'Главная страница', href: '/' },
     { label: 'Новости медицины', href: '/news' },
-    { label: 'Видеоуроки', href: '#' },
+    { label: 'Видеоуроки', href: '/lessons' },
     { label: 'Форум', href: '#' },
   ];
   useEffect(() => {
