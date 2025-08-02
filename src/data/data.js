@@ -1,4 +1,3 @@
-import { img } from 'framer-motion/client'
 import img1 from '../img/img1.jpg'
 import img2 from '../img/img2.jpg'
 import img3 from '../img/img3.jpg'
@@ -12,8 +11,11 @@ import p3 from '../img/p3.jfif'
 import p4 from '../img/p4.jfif'
 import p5 from '../img/p5.webp'
 import p6 from '../img/p6.jfif'
-
-
+import lesson1 from '../img/lesson1.jpg'
+import lesson2 from '../img/lesson2.jpg'
+import lesson3 from '../img/lesson3.avif'
+import { MdOutlineMailOutline, MdOutlinePhone } from 'react-icons/md'
+import { CiLocationOn } from 'react-icons/ci'
 
 export const blogData = [
     {
@@ -402,4 +404,20 @@ export const faqs = [
     'Чтобы подписаться на новости, заполните форму на нашем сайте. Вы будете получать уведомления о новых статьях и видеоуроках. Не упустите возможность быть в курсе!'
   }
 ];
-
+export const lesson = [
+  {
+    img:lesson1,
+    name:"Темы видео уроков по медицине",
+    desc:"Изучите ключевые аспекты медицинской практики."
+  },
+  {
+    img:lesson2,
+    name:"Преимущества онлайн обучения в медицине",
+    desc:"Удобство и доступность материалов для всех."
+  },
+  {
+    img:lesson3,
+    name:"Как выбрать правильный курс обучения",
+    desc:"Рекомендации по выбору наиболее подходящих курсов."
+  },
+]

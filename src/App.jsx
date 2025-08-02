@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout'
 import Home from './pages/Home'
 import News from './pages/News'
 import New from './pages/New'
+import Lessons from './pages/Lessons'
 
 const router = createBrowserRouter(
   createRoutesFromChildren(
@@ -11,6 +12,8 @@ const router = createBrowserRouter(
       <Route path='/' element={<Home />} />
       <Route path='/news' element={<News />} />
       <Route path='/news/:id' element={<New/>} />
+      <Route path='/lessons' element={<Lessons/>} />
+
     </Route>
   )
 )

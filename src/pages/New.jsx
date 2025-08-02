@@ -11,8 +11,6 @@ import p6 from '../img/p6.jfif';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
-
 const New = () => {
     const [showMobileTOC, setShowMobileTOC] = useState(false);
     const { id } = useParams();
@@ -20,7 +18,7 @@ const New = () => {
     const [activeId, setActiveId] = useState(null);
     const [currentUrl, setCurrentUrl] = useState('');
     const [openIndex, setOpenIndex] = useState(null);
-    const [clickedId, setClickedId] = useState(null); // faqat mobil uchun
+    const [clickedId, setClickedId] = useState(null);
 
     useEffect(() => {
         AOS.init({
