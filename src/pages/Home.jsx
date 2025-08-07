@@ -241,7 +241,8 @@ const Home = () => {
                             {videos.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="relative mb-10">
-                                        <VideoPlayer videoSrc={item.video} />
+                                        <VideoPlayer videoSrc={item.video}   preview={item.preview}
+                                        />
                                     </div>
                                 </SwiperSlide>
                             ))}

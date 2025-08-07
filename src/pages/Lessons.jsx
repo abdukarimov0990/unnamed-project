@@ -1,8 +1,10 @@
-import React, { useRef, useState } from 'react'
-import { lesson, videos } from '../data/data'
-import { FaPlay } from 'react-icons/fa'
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineMailOutline, MdOutlinePhone } from 'react-icons/md'
-import { CiLocationOn } from 'react-icons/ci'
+import React from 'react';
+import { lesson, videos } from '../data/data';
+import VideoPlayer from '../components/VideoPlayer';
+import { FaPlay } from 'react-icons/fa';
+import { MdKeyboardArrowRight, MdOutlineMailOutline, MdOutlinePhone } from 'react-icons/md';
+import { CiLocationOn } from 'react-icons/ci';
+import { Link } from 'react-router';
 
 const Lessons = () => {
     return (
@@ -33,7 +35,8 @@ const Lessons = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {videos.map((item, index) => (
                             <div className="relative" key={index} data-aos="flip-up">
-                                <VideoPlayer videoSrc={item.video} />
+                                <Link to={`/lessons/${item.id}`}><img src={item.preview} alt="" className='w-full h-full' />
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -125,50 +128,7 @@ const Lessons = () => {
                 </div>
             </section>
         </>
-    )
-}
-
-const VideoPlayer = ({ videoSrc }) => {
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    const handlePlayPause = () => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        if (video.paused) {
-            video.play();
-            setIsPlaying(true);
-        } else {
-            video.pause();
-            setIsPlaying(false);
-        }
-    };
-
-    return (
-        <div className="relative">
-            <video
-                ref={videoRef}
-                src={videoSrc}
-                className="h-[296px] w-full object-cover"
-                onEnded={() => setIsPlaying(false)}
-            />
-            {!isPlaying && (
-                <button
-                    onClick={handlePlayPause}
-                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white transition-opacity"
-                >
-                    <FaPlay className="text-3xl" />
-                </button>
-            )}
-            {isPlaying && (
-                <button
-                    onClick={handlePlayPause}
-                    className="absolute inset-0"
-                />
-            )}
-        </div>
     );
 };
 
-export default Lessons
+export default Lessons;
