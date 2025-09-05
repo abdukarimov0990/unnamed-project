@@ -22,7 +22,7 @@ import { FaBullhorn, FaNewspaper, FaPlay, FaRegNewspaper } from "react-icons/fa"
 import { GiDoctorFace, GiMedicinePills } from 'react-icons/gi'
 import { HiNewspaper } from "react-icons/hi";
 import { FaVideo, FaComments } from "react-icons/fa";
-
+import { Link } from 'react-router'
 
 const Home = () => {
     useEffect(() => {
@@ -48,7 +48,7 @@ const Home = () => {
                     className="mySwiper h-screen"
                 >
                     <SwiperSlide className="relative bg-cover bg-center h-screen w-full bg-no-repeat" style={{ backgroundImage: `url(${bg1})` }}>
-                        <div className="absolute inset-0 bg-black opacity-40 z-0"></div> {/* Qorong'u qatlam */}
+                        <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
                         <div className="container relative z-10 h-full flex items-center justify-start">
                             <div className="text-white text-center lg:text-start max-w-[668px]">
                                 <h1 className='font-bold text-6xl mb-6'>Ваш надежный источник медицинской информации</h1>
@@ -63,7 +63,7 @@ const Home = () => {
                         className="relative bg-cover bg-center w-full h-screen bg-no-repeat"
                         style={{ backgroundImage: `url(${bg2})` }}
                     >
-                        <div className="absolute inset-0 bg-black opacity-40 z-0"></div> {/* Qorong'u qatlam */}
+                        <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
                         <div className="container h-full flex items-center justify-start text-white relative z-10">
                             <div className="text-center lg:text-start max-w-[668px]">
                                 <h1 className="font-bold text-6xl mb-6">Ваш надежный источник медицинской информации</h1>
@@ -139,8 +139,8 @@ const Home = () => {
                     <div className="flex items-end justify-between mb-20">
                         <div data-aos="fade-right">
                             <h4 className='font-bold mb-4'>Blog</h4>
-                            <h2 className='text-5xl font-bold mb-6'>Short heading goes here</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <h2 className='text-5xl font-bold mb-6'> Наши статьи</h2>
+                            <p>Наши статьи помогают находить новые идеи, вдохновение, решения и знания для вашего роста и развития.</p>
                         </div>
                         <button data-aos="fade-left" className='py-3 px-6 hidden lg:block bg-white border-2 border-black'>
                             View More
@@ -241,8 +241,7 @@ const Home = () => {
                             {videos.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="relative mb-10">
-                                        <VideoPlayer videoSrc={item.video}   preview={item.preview}
-                                        />
+                                        <VideoPlayer link={`/lessons/${item.id}`} />
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -280,7 +279,6 @@ const Home = () => {
                         <p>Мы всегда готовы ответить на ваши вопросы.</p>
                     </div>
                     <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
-                        {/* Left side - Contact Info */}
                         <ul data-aos="fade-right" className='flex flex-col gap-10 w-full lg:max-w-[400px]'>
                             <li>
                                 <TfiEmail size="32px" className='mb-4' />
@@ -308,7 +306,6 @@ const Home = () => {
                             </li>
                         </ul>
 
-                        {/* Right side - Map */}
                         <iframe
                             data-aos="fade-left"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12067.905655892979!2d69.2549202!3d41.292592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1719580620000!5m2!1sen!2s"
@@ -323,46 +320,21 @@ const Home = () => {
         </div>
     )
 }
-const VideoPlayer = ({ videoSrc }) => {
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
 
-    const handlePlayPause = () => {
-        const video = videoRef.current;
-        if (!video) return;
-
-        if (video.paused) {
-            video.play();
-            setIsPlaying(true);
-        } else {
-            video.pause();
-            setIsPlaying(false);
-        }
-    };
+const VideoPlayer = ({link }) => {
     return (
-        <div className="relative">
-            <video
-                ref={videoRef}
-                src={videoSrc}
-                className="h-[296px] w-full object-cover"
-                onEnded={() => setIsPlaying(false)}
-            />
-            {!isPlaying && (
-                <button
-                    onClick={handlePlayPause}
-                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white transition-opacity"
-                >
-                    <FaPlay className="text-3xl" />
-                </button>
-            )}
-            {isPlaying && (
-                <button
-                    onClick={handlePlayPause}
-                    className="absolute inset-0"
-                >
-                </button>
-            )}
-        </div>
+      <div  className="relative h-[296px] w-full object-cover rounded-xl"
+>
+      
+        <Link
+          to={link}
+          className="absolute inset-0 flex items-center justify-center 
+                     bg-black/30 backdrop-blur-sm rounded-xl text-white"
+        >
+          <FaPlay className="text-4xl drop-shadow-lg" />
+        </Link>
+      </div>
     );
 };
+
 export default Home

@@ -35,37 +35,11 @@ const Lessons = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {videos.map((item, index) => (
                             <div className="relative" key={index} data-aos="flip-up">
-                                <Link to={`/lessons/${item.id}`}><img src={item.preview} alt="" className='w-full h-full' />
+                                <Link to={`/lessons/${item.id}`}><video src={item.video}           className="h-[296px] w-full object-cover rounded-xl"
+                                ></video>
                                 </Link>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            <section className='py-20 px-4' data-aos="fade-right">
-                <div className="container mx-auto">
-                    <div className="flex flex-col lg:flex-row mb-20 justify-between gap-8">
-                        <div>
-                            <h4 className='font-bold mb-4'>Уроки</h4>
-                            <h2 className='font-bold text-4xl md:text-5xl leading-[130%]'>Обучающие видео по <br className="hidden sm:block" /> медицинским темам</h2>
-                        </div>
-                        <div className="w-full lg:max-w-[600px]">
-                            <p>Наши видео уроки охватывают широкий спектр медицинских тем. Вы сможете узнать о последних достижениях в медицине и получить практические советы от экспертов. Каждый урок создан с учетом потребностей студентов и профессионалов.</p>
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
-                        {lesson.map((item, index) => (
-                            <div key={index} data-aos="zoom-in-up">
-                                <img src={item.img} alt={item.name} className='h-60 w-full object-cover mb-8' />
-                                <h3 className='font-bold text-2xl md:text-3xl mb-6'>{item.name}</h3>
-                                <p className='pr-0 md:pr-5'>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex gap-4" data-aos="fade-up">
-                        <a href='#' className="py-3 px-6 border cursor-pointer text-center">Смотреть</a>
-                        <a href="#" className="py-3 px-6 flex items-center justify-center gap-2 border cursor-pointer">Узнать <MdKeyboardArrowRight /></a>
                     </div>
                 </div>
             </section>

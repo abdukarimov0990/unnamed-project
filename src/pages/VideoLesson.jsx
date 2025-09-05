@@ -34,7 +34,6 @@ const VideoLesson = () => {
           <div className="w-full max-w-full aspect-video rounded-xl overflow-hidden" data-aos="zoom-in">
             <VideoPlayer
               videoSrc={lessonItem.video}
-              preview={lessonItem.preview}
               className="h-full w-full"
             />
           </div>
